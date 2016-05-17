@@ -10,23 +10,13 @@ class CardGenerator
   end
 
   def to_object
-    #lines = @cards.split("\n")
     @cards.each_line do |line|
       @new_card << line.chomp.split(",")
-
     end
-    @new_card
-  end
+    @cards = @new_card
+    end
+
+
+
+
 end
-
-def to_cards
-
-
-end
-
-gen = CardGenerator.new
-gen.cards
-
-require "pry"; binding.pry
-
-1+1

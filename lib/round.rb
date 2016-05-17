@@ -1,6 +1,7 @@
 require_relative 'deck'
 require_relative 'card'
 require_relative 'guess'
+require_relative 'cardgen'
 
 class Round
   attr_reader :deck
@@ -28,11 +29,12 @@ class Round
   end
 
   def start
+      require "pry"; binding.pry
     p "Welcome! You are playing with #{deck.count} cards"
     p "----------------------------------------------------"
     while current_card != nil
     p "This is card #{guesses.count + 1} out of #{deck.count}"
-    p current_card.question
+    p current_card[0]
     repl_response
   end
   p "****** Game over! ******"
