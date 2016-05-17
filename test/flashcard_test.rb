@@ -4,7 +4,7 @@ require './lib/card'
 require './lib/guess'
 require './lib/deck'
 require './lib/round'
-require './lib/card_generator'
+require './lib/cardgen'
 
 class FlashcardTest < Minitest::Test
 
@@ -147,9 +147,10 @@ class FlashcardTest < Minitest::Test
   end
 
   def test_it_can_read_file
-    ARGV[0] = "cards.txt"
-    cards = CardGenerator.new
-    assert_equal "What is the best bar on Blake St?, The Vault\nWho won the 2016 NCAA National Championship?, Villanova\nWho is the best player in the NBA?, Kristaps Porzingis\nWho is the President of the Knicks?, Phil Jackson\nClear eyes, full hearts?, Can't Lose\n",cards.cards
+    filename = "cards.txt"
+    cards = CardGenerator.new(filename)
+    assert_equal 5,cards.cards.count
+    assert_equal Array, cards.cards.class
   end
 
 

@@ -29,12 +29,11 @@ class Round
   end
 
   def start
-      require "pry"; binding.pry
     p "Welcome! You are playing with #{deck.count} cards"
     p "----------------------------------------------------"
     while current_card != nil
     p "This is card #{guesses.count + 1} out of #{deck.count}"
-    p current_card[0]
+    p current_card.question
     repl_response
   end
   p "****** Game over! ******"
@@ -43,7 +42,7 @@ class Round
 
   def repl_response
     record_guess(gets.chomp)
-    @guesses.last.feedback
+    p @guesses.last.feedback
   end
 
 

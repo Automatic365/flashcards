@@ -1,22 +1,30 @@
 require_relative 'card'
 
 class CardGenerator
-  attr_reader :cards
-  attr_accessor :new_card
+  attr_reader :file
 
-  def initialize
-    @cards = File.read(ARGV[0])
-    @new_card = []
+
+  def initialize(filename)
+    @file = File.read(filename)
   end
 
-  def to_object
-    @cards.each_line do |line|
-      @new_card << line.chomp.split(",")
+  def cards
+    card_info = @file.split("\n")
+                .map do |line|
+        line.chomp.split(",")
     end
-    @cards = @new_card
+    card_info.map do |question, answer|
+      Card.new(question, answer)
     end
+  end
 
 
 
 
 end
+#
+# gen = CardGenerator.new
+#
+#   require "pry"; binding.pry
+#
+#   1+1

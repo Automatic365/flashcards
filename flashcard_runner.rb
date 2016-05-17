@@ -4,9 +4,8 @@ require_relative './lib/guess'
 require_relative './lib/round'
 require_relative './lib/cardgen'
 
-filename = ARGV[0]
-cards = CardGenerator.new
-cards.to_object
+filename = "cards.txt"
+cards = CardGenerator.new(filename).cards
 
 # card_1 = Card.new("What is the best bar on Blake St?", "The Vault")
 # card_2 = Card.new("Who won the 2016 NCAA National Championship?", "Villanova")
