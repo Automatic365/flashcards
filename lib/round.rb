@@ -19,7 +19,7 @@ class Round
   def record_guess(response)
     @number_correct += 1 if response == current_card.answer
     @guesses << Guess.new(response, current_card)
-    p guesses.last.feedback
+    guesses.last.feedback
   end
 
   def percent_correct

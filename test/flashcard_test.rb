@@ -146,18 +146,11 @@ class FlashcardTest < Minitest::Test
       assert_equal 0.4, round.percent_correct
   end
 
-    # => #<Card:0x007ffdf1820a90 @answer="93,000,000", @question="Approximately how many miles are in one astronomical unit?">
-    # round.record_guess("2")
-    # => #<Guess:0x007ffdf19c8a00 @card=#<Card:0x007ffdf1820a90 @answer="93,000,000", @question="Approximately how many miles are in one astronomical unit?">, @response="2">
-    # round.guesses.count
-    # => 2
-    # round.guesses.last.feedback
-    # => "Incorrect."
-    # round.number_correct
-    # => 1
-    # round.percent_correct
-    # => 50
-
+  def test_it_can_read_file
+    ARGV[0] = "cards.txt"
+    cards = CardGenerator.new
+    assert_equal "What is the best bar on Blake St?, The Vault\nWho won the 2016 NCAA National Championship?, Villanova\nWho is the best player in the NBA?, Kristaps Porzingis\nWho is the President of the Knicks?, Phil Jackson\nClear eyes, full hearts?, Can't Lose\n",cards.cards
+  end
 
 
 
