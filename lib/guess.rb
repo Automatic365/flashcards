@@ -9,7 +9,7 @@ class Guess
   end
 
   def correct?
-    if @response == @card.answer
+    if @response.downcase == @card.answer.downcase
       true
     end
   end

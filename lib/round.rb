@@ -31,8 +31,7 @@ class Round
     p "Welcome! You are playing with #{deck.count} cards"
     p "----------------------------------------------------"
     while current_card != nil
-      card_update = "This is card #{guesses.count + 1} out of #{deck.count}"
-    p card_update
+    p "This is card #{guesses.count + 1} out of #{deck.count}"
     p current_card.question
     repl_response
   end

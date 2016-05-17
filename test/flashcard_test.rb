@@ -4,6 +4,7 @@ require './lib/card'
 require './lib/guess'
 require './lib/deck'
 require './lib/round'
+require './lib/card_generator'
 
 class FlashcardTest < Minitest::Test
 
