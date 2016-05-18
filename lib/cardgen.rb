@@ -9,7 +9,7 @@ class CardGenerator
   end
 
   def cards
-    card_info = @file.split("\n")
+    card_info = @file.split("\n").shuffle
                 .map do |line|
         line.chomp.split(",")
     end
