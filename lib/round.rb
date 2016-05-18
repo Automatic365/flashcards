@@ -23,6 +23,14 @@ class Round
     guesses.last.feedback
   end
 
+  def get_hint(input)
+    hint = ['h', 'H']
+    if hint.include?(input)
+      p current_card.hint
+    end
+  end
+
+
   def percent_correct
     percent = @number_correct / @guesses.count.to_f
     percent.to_f
@@ -32,12 +40,14 @@ class Round
     p "Welcome! You are playing with #{deck.count} cards"
     p "----------------------------------------------------"
     while current_card != nil
-    p "This is card #{guesses.count + 1} out of #{deck.count}"
-    p current_card.question
-    repl_response
-  end
-  p "****** Game over! ******"
-  p "You had #{number_correct} correct guesses out of #{guesses.count} for a score of #{(percent_correct * 100).to_i}%."
+      p "This is card #{guesses.count + 1} out of #{deck.count}"
+      p current_card.question
+      p "Type 'H' for a hint"
+      repl_hint
+      repl_response
+    end
+    p "****** Game over! ******"
+    p "You had #{number_correct} correct guesses out of #{guesses.count} for a score of #{(percent_correct * 100).to_i}%."
   end
 
   def repl_response
@@ -45,7 +55,8 @@ class Round
     p @guesses.last.feedback
   end
 
-
-
+  def repl_hint
+    get_hint(gets.chomp)
+  end
 
 end

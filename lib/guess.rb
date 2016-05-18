@@ -22,6 +22,4 @@ class Guess
     end
   end
 
-
-
 end

@@ -11,5 +11,4 @@ class Deck
     @cards.count
   end
 
-
 end

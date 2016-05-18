@@ -2,7 +2,7 @@
   "Unknown Test Framework": {
     "coverage": {
     },
-    "timestamp": 1463592394
+    "timestamp": 1463608797
   },
   "Unit Tests": {
     "coverage": {
@@ -13,7 +13,7 @@
         1,
         55,
         55,
-        null,
+        55,
         null,
         null,
         null
@@ -68,8 +68,6 @@
         null,
         null,
         null,
-        null,
-        null,
         null
       ],
       "/Users/Automatic365/Turing/16035/projects/flashcards/lib/deck.rb": [
@@ -84,7 +82,6 @@
         null,
         1,
         2,
-        null,
         null,
         null,
         null
@@ -116,6 +113,14 @@
         null,
         null,
         1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
         2,
         2,
         null,
@@ -127,6 +132,8 @@
         0,
         0,
         0,
+        0,
+        0,
         null,
         0,
         0,
@@ -137,7 +144,8 @@
         0,
         null,
         null,
-        null,
+        1,
+        0,
         null,
         null,
         null
@@ -148,7 +156,6 @@
         1,
         1,
         null,
-        null,
         1,
         2,
         null,
@@ -160,8 +167,6 @@
         null,
         3,
         27,
-        null,
-        null,
         null,
         null,
         null,
@@ -335,9 +340,19 @@
         1,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1463592393
+    "timestamp": 1463608797
   }
 }

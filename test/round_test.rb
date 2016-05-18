@@ -7,32 +7,32 @@ require './lib/deck'
 class RoundTest < Minitest::Test
 
   def test_it_can_make_a_deck
-    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
-    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau", "hint")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000", "hint")
     deck = Deck.new([card_1, card_2])
     round = Round.new(deck)
     assert_equal 2, round.deck.count
   end
 
   def test_it_has_guess_array
-    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
-    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau", "hint")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000", "hint")
     deck = Deck.new([card_1, card_2])
     round = Round.new(deck)
     assert_equal [], round.guesses
   end
 
   def test_it_can_show_current_card
-    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
-    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau", "hint")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000", "hint")
     deck = Deck.new([card_1, card_2])
     round = Round.new(deck)
     assert_instance_of Card, round.current_card
   end
 
   def test_it_can_store_guesses
-    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
-    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau", "hint")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000", "hint")
     deck = Deck.new([card_1, card_2])
     round = Round.new(deck)
     round.record_guess("Juneau")
@@ -41,8 +41,8 @@ class RoundTest < Minitest::Test
   end
 
   def test_it_can_check_guesses
-    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
-    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau", "hint")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000", "hint")
     deck = Deck.new([card_1, card_2])
     round = Round.new(deck)
     round.record_guess("Juneau")
@@ -50,8 +50,8 @@ class RoundTest < Minitest::Test
   end
 
   def test_it_can_record_correct_guesses
-    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
-    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau", "hint")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000", "hint")
     deck = Deck.new([card_1, card_2])
     round = Round.new(deck)
     round.record_guess("Juneau")
@@ -60,8 +60,8 @@ class RoundTest < Minitest::Test
   end
 
   def test_it_can_record_more_than_one_guess
-    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
-    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau", "hint")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000", "hint")
     deck = Deck.new([card_1, card_2])
     round = Round.new(deck)
     round.record_guess("Juneau")
@@ -72,8 +72,8 @@ class RoundTest < Minitest::Test
   end
 
   def current_card_moves_correctly
-    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
-    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau", "hint")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000", "hint")
     deck = Deck.new([card_1, card_2])
     round = Round.new(deck)
     round.record_guess("Juneau")
@@ -82,8 +82,8 @@ class RoundTest < Minitest::Test
   end
 
   def test_it_can_score_round
-    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
-    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau", "hint")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000", "hint")
     deck = Deck.new([card_1, card_2])
     round = Round.new(deck)
     round.record_guess("Juneau")
@@ -93,11 +93,11 @@ class RoundTest < Minitest::Test
   end
 
   def test_it_can_score_another_round
-    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
-    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
-    card_3 = Card.new("Who is the best player in the NBA?", "Kristaps Porzingis")
-    card_4 = Card.new("Who is the MVP of the NBA?", "Steph Curry")
-    card_5 = Card.new("Who is the President of the Knicks?", "Phil Jackson")
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau", "hint")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000", "hint")
+    card_3 = Card.new("Who is the best player in the NBA?", "Kristaps Porzingis", "hint")
+    card_4 = Card.new("Who is the MVP of the NBA?", "Steph Curry", "hint")
+    card_5 = Card.new("Who is the President of the Knicks?", "Phil Jackson", "hint")
     deck = Deck.new([card_1, card_2, card_3, card_4, card_5])
     round = Round.new(deck)
     round.record_guess("Juneau")

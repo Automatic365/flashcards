@@ -5,7 +5,7 @@ require './lib/guess'
 class GuessTest < Minitest::Test
 
   def test_it_can_evaluate_guess
-    card = Card.new("What is the capital of Alaska?", "Juneau")
+    card = Card.new("What is the capital of Alaska?", "Juneau", "hint")
     guess = Guess.new("Juneau", card)
     assert_equal "Juneau", guess.card.answer
     assert_equal "Juneau", guess.response
@@ -14,7 +14,7 @@ class GuessTest < Minitest::Test
   end
 
   def test_it_can_evaluate_another_guess
-    card = Card.new("Which planet is closest to the sun?", "Mercury")
+    card = Card.new("Which planet is closest to the sun?", "Mercury", "hint")
     guess = Guess.new("Juneau", card)
     assert_equal "Mercury", guess.card.answer
     assert_equal "Juneau", guess.response

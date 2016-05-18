@@ -1,6 +1,6 @@
 require 'simplecov'
 SimpleCov.start
-SimpleCov.command_name
+SimpleCov.command_name 
 
 require "rake"
 require "rake/testtask"
