@@ -1,5 +1,4 @@
-require 'minitest/autorun'
-require 'minitest/pride'
+require 'testhelper'
 require './lib/card'
 require './lib/guess'
 

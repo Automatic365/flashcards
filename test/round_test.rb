@@ -1,5 +1,4 @@
-require 'minitest/autorun'
-require 'minitest/pride'
+require 'testhelper'
 require './lib/card'
 require './lib/guess'
 require './lib/deck'
@@ -109,5 +108,5 @@ class RoundTest < Minitest::Test
     assert_equal 2, round.number_correct
     assert_equal 0.4, round.percent_correct
   end
-  
+
 end
