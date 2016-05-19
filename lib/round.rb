@@ -4,7 +4,7 @@ require_relative 'guess'
 require_relative 'cardgen'
 
 class Round
-  attr_reader :deck
+  attr_reader :deck, :input
   attr_accessor :guesses, :number_correct
 
   def initialize(deck)
@@ -28,21 +28,31 @@ class Round
     percent.to_f
   end
 
+  def repl_response(response)
+    record_guess(response)
+    p @guesses.last.feedback
+  end
+
+  def get_input
+    @input = gets.chomp
+    if input == "H"
+      p current_card.hint
+    else
+      repl_response(input)
+    end
+  end
+  
   def start
     p "Welcome! You are playing with #{deck.count} cards"
     p "----------------------------------------------------"
     while current_card != nil
       p "This is card #{guesses.count + 1} out of #{deck.count}"
       p current_card.question
-      repl_response 
+      get_input
     end
     p "****** Game over! ******"
     p "You had #{number_correct} correct guesses out of #{guesses.count} for a score of #{(percent_correct * 100).to_i}%."
   end
 
-  def repl_response
-    record_guess(gets.chomp)
-    p @guesses.last.feedback
-  end
 
 end
