@@ -34,7 +34,7 @@ class Round
     while current_card != nil
       p "This is card #{guesses.count + 1} out of #{deck.count}"
       p current_card.question
-      repl_response
+      repl_response 
     end
     p "****** Game over! ******"
     p "You had #{number_correct} correct guesses out of #{guesses.count} for a score of #{(percent_correct * 100).to_i}%."
