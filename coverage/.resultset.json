@@ -2,7 +2,7 @@
   "Unknown Test Framework": {
     "coverage": {
     },
-    "timestamp": 1463608797
+    "timestamp": 1463626592
   },
   "Unit Tests": {
     "coverage": {
@@ -340,19 +340,9 @@
         1,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null
       ]
     },
-    "timestamp": 1463608797
+    "timestamp": 1463626592
   }
 }
