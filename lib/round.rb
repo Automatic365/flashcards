@@ -35,24 +35,25 @@ class Round
 
   def get_input
     @input = gets.chomp
-    if input == "H"
-      p current_card.hint
+    hint = ['h', 'H']
+    if hint.include?(input)
+      p "Hint is: #{current_card.hint.upcase}. Now let's try again"
     else
       repl_response(input)
     end
   end
-  
+
   def start
     p "Welcome! You are playing with #{deck.count} cards"
     p "----------------------------------------------------"
     while current_card != nil
       p "This is card #{guesses.count + 1} out of #{deck.count}"
+      p "Press 'H' for hint"
       p current_card.question
       get_input
     end
     p "****** Game over! ******"
-    p "You had #{number_correct} correct guesses out of #{guesses.count} for a score of #{(percent_correct * 100).to_i}%."
+    p "You had #{number_correct} correct guesses out of #{guesses.count} questions for a score of #{(percent_correct * 100).to_i}%."
   end
-
 
 end

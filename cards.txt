@@ -3,7 +3,7 @@ Who won the 2016 NCAA National Championship?,Villanova,Means New House in Spanis
 Who is the best player in the NBA?,Kristaps Porzingis,The Pride of Latvia
 Who is the President of the Knicks?,Phil Jackson,11 Rings
 What is the best developer school in Denver?,Turing,Not GSchool
-What is 5 + 5?,10,Cmon
+What is 5 + 5?,10,You're better than this
 What is Rachel's favorite animal?,red panda,Looks like a fox
 What is Mike's middle name?,nobody knows,It's not Mikeface
 What cardboard cutout lives at Turing?,Justin Bieber,His momma don't like you
