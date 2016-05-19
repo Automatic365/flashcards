@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-05-18T23:36:48-06:00">2016-05-18T23:36:48-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-05-19T08:13:53-06:00">2016-05-19T08:13:53-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">89.95%</span></span>
+    (<span class="covered_percent"><span class="yellow">89.1%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.81
+         2.78
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>9</b> files in total.
-    <b>209</b> relevant lines. 
+    <b>211</b> relevant lines. 
     <span class="green"><b>188</b> lines covered</span> and
-    <span class="red"><b>21</b> lines missed </span>
+    <span class="red"><b>23</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -63,7 +63,7 @@
       <tr>
         <td class="strong"><a href="#8715b14ad0f2ddd0e006e776ab1ab569ab90d1a1" class="src_link" title="lib/cardgen.rb">lib/cardgen.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>27</td>
+        <td>20</td>
         <td>10</td>
         <td>10</td>
         <td>0</td>
@@ -92,12 +92,12 @@
       
       <tr>
         <td class="strong"><a href="#6bdec1312908dc74f86584a28501552d1135cd91" class="src_link" title="lib/round.rb">lib/round.rb</a></td>
-        <td class="red strong">62.16 %</td>
-        <td>58</td>
-        <td>37</td>
+        <td class="red strong">58.97 %</td>
+        <td>59</td>
+        <td>39</td>
         <td>23</td>
-        <td>14</td>
-        <td>2.9</td>
+        <td>16</td>
+        <td>2.7</td>
       </tr>
       
       <tr>
@@ -366,48 +366,6 @@
           
           
           <code class="ruby">end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
-          <code class="ruby"># gen = CardGenerator.new(&quot;cards.txt&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">#</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">#   require &quot;pry&quot;; binding.pry</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">#</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby">#   1+1</code>
         </li>
       
     </ol>
@@ -687,11 +645,11 @@
         <div class="source_table" id="6bdec1312908dc74f86584a28501552d1135cd91">
   <div class="header">
     <h3>lib/round.rb</h3>
-    <h4><span class="red">62.16 %</span> covered</h4>
+    <h4><span class="red">58.97 %</span> covered</h4>
     <div>
-      <b>37</b> relevant lines. 
+      <b>39</b> relevant lines. 
       <span class="green"><b>23</b> lines covered</span> and
-      <span class="red"><b>14</b> lines missed.</span>
+      <span class="red"><b>16</b> lines missed.</span>
     </div>
   </div>
   
@@ -923,124 +881,130 @@
         <li class="missed" data-hits="0" data-linenumber="38">
           
           
-          <code class="ruby">    if input == &quot;H&quot;</code>
+          <code class="ruby">    hint = [&#39;h&#39;, &#39;H&#39;]</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="39">
           
           
-          <code class="ruby">      p current_card.hint</code>
+          <code class="ruby">    if hint.include?(input)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="missed" data-hits="0" data-linenumber="40">
+          
+          
+          <code class="ruby">      p &quot;Hint is: #{current_card.hint.upcase}. Now let&#39;s try again&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="41">
+        <li class="missed" data-hits="0" data-linenumber="42">
           
           
           <code class="ruby">      repl_response(input)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
           <code class="ruby">  def start</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="46">
+        <li class="missed" data-hits="0" data-linenumber="47">
           
           
           <code class="ruby">    p &quot;Welcome! You are playing with #{deck.count} cards&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="47">
+        <li class="missed" data-hits="0" data-linenumber="48">
           
           
           <code class="ruby">    p &quot;----------------------------------------------------&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="48">
+        <li class="missed" data-hits="0" data-linenumber="49">
           
           
           <code class="ruby">    while current_card != nil</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="49">
+        <li class="missed" data-hits="0" data-linenumber="50">
           
           
           <code class="ruby">      p &quot;This is card #{guesses.count + 1} out of #{deck.count}&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="50">
+        <li class="missed" data-hits="0" data-linenumber="51">
+          
+          
+          <code class="ruby">      p &quot;Press &#39;H&#39; for hint&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="52">
           
           
           <code class="ruby">      p current_card.question</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="51">
+        <li class="missed" data-hits="0" data-linenumber="53">
           
           
           <code class="ruby">      get_input</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="54">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="53">
+        <li class="missed" data-hits="0" data-linenumber="55">
           
           
           <code class="ruby">    p &quot;****** Game over! ******&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="54">
+        <li class="missed" data-hits="0" data-linenumber="56">
           
           
-          <code class="ruby">    p &quot;You had #{number_correct} correct guesses out of #{guesses.count} for a score of #{(percent_correct * 100).to_i}%.&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="56">
-          
-          
-          <code class="ruby"></code>
+          <code class="ruby">    p &quot;You had #{number_correct} correct guesses out of #{guesses.count} questions for a score of #{(percent_correct * 100).to_i}%.&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="57">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
           
           
           <code class="ruby">end</code>

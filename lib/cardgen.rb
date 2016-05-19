@@ -18,10 +18,3 @@ class CardGenerator
   end
 
 end
-
-
-# gen = CardGenerator.new("cards.txt")
-#
-#   require "pry"; binding.pry
-#
-#   1+1
